@@ -6,24 +6,50 @@
       content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'"
     />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Website Blocker Options</title>
     <script src="popup.js"></script>
+    <link rel="stylesheet" href="popup.css" />
   </head>
   <body>
-    <h1>Website Blocker</h1>
-    <p>Enter the websites you want to block during certain times of the day:</p>
-    <form id="myForm">
-      <label for="block-list">Block List:</label>
-      <textarea id="block-list" name="block-list"></textarea>
-      <br />
-      <label for="start-time">Start Time:</label>
-      <input type="time" id="start-time" name="start-time" />
-      <br />
-      <label for="end-time">End Time:</label>
-      <input type="time" id="end-time" name="end-time" />
-      <br />
-      <button type="submit">Save</button>
-    </form>
+    <div class="wrapper">
+      <div class="header">
+        <h1>Website Blocker</h1>
+        <img
+          src="./images/stop.png"
+          alt="stop sign"
+          id="stop-enabled"
+          class="hidden"
+        />
+        <img
+          src="./images/stop-disabled.png"
+          alt="stop sign"
+          id="stop-disabled"
+        />
+      </div>
+      <p class="description">
+        Be more productive by blocking websites that distract you from your
+        work.
+      </p>
+      <p class="description">Add all websites you want to block</p>
+
+      <div class="add-site">
+        <input type="text" id="new-site" placeholder="instagram" />
+        <button id="add-new-site">Add</button>
+      </div>
+
+      <div id="blocked-sites-wrapper"></div>
+
+      <div class="button-wrapper">
+        <button type="button" id="stop">Stop</button>
+        <button type="button" id="start">Start</button>
+      </div>
+    </div>
   </body>
   <script src="popup.js"></script>
 </html>

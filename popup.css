@@ -1,0 +1,159 @@
+/* color variable for black */
+:root {
+  --black: #212427;
+  --white: #f5f5f7;
+  --green: #0fa083;
+  --red: #d63031;
+  --blue: #0089c4;
+
+  --font: "Atkinson Hyperlegible", sans-serif;
+}
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--font);
+}
+
+.hidden {
+  display: none;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.wrapper {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid var(--white);
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+.header img {
+  width: 3rem;
+  height: 3rem;
+}
+
+.description {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  margin: 0;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.button-wrapper button {
+  padding: 0.6rem 1.8rem;
+  font-size: 1rem;
+  color: var(--white);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.button-wrapper button#start {
+  background: var(--green);
+}
+.button-wrapper button#stop {
+  background: var(--red);
+}
+
+#site-list {
+  width: 80%;
+  height: 5rem;
+  padding: 1rem;
+  font-size: 1rem;
+  font-family: var(--font);
+  letter-spacing: 0.05rem;
+  line-height: 1.2rem;
+}
+
+#blocked-sites-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+#blocked-sites-wrapper .blocked-site-tag {
+  padding: 0.5rem 1rem 0.4rem;
+  background: var(--red);
+  color: var(--white);
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.05rem;
+  position: relative;
+}
+
+#blocked-sites-wrapper .blocked-site-tag .delete-button {
+  position: absolute;
+  right: -0.5rem;
+  top: -0.5rem;
+  width: 1rem;
+  height: 1rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  display: none;
+  border: none;
+  cursor: pointer;
+}
+
+#blocked-sites-wrapper .blocked-site-tag:hover .delete-button {
+  display: flex;
+}
+
+.add-site {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.add-site input {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  color: var(--white);
+  border: none;
+  border-radius: 0.5rem;
+  background: var(--black);
+  border: 1px solid var(--white);
+  outline: none;
+}
+.add-site button {
+  padding: 0.6rem 1.8rem;
+  font-size: 1rem;
+  color: var(--white);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background: var(--blue);
+  border: 1px solid var(--blue);
+}
