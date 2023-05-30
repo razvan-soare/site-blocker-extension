@@ -73,6 +73,12 @@ h1 {
   border-radius: 0.5rem;
   cursor: pointer;
 }
+button:hover {
+  transform: scale(1.03);
+}
+button:active {
+  transform: scale(0.98);
+}
 
 .button-wrapper button#start {
   background: var(--green);
