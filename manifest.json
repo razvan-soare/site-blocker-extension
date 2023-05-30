@@ -1,0 +1,14 @@
+{
+  "name": "Website Blocker",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "Blocks websites during certain times of the day",
+  "permissions": ["storage", "declarativeNetRequest"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
