@@ -21,6 +21,7 @@ The extension adds a filter on the URL and if it has the specified word in the U
 - Choose between temporary or permanent blocking options.
 - Set time intervals for temporary blocks to allow for scheduled breaks.
 - Track your productivity and monitor the amount of time saved by avoiding distractions.
+- Allow usage of a certain time before blocking
 
 ## Installation
 
